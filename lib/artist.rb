@@ -13,7 +13,7 @@ class Artist
   def add_song(song)
     @songs << song
     song.artist = self
-  end
+    end
 
   def songs
     @songs
@@ -40,13 +40,9 @@ class Artist
   end
 
   def print_songs
-    printed_songs = ""
-    @@all.each do |song|
-      printed_songs += song.name + "\n"
-      binding.pry
-
+    @songs.each do |song|
+      puts song.name
     end
-    printed_songs
   end
 
 end
