@@ -25,16 +25,14 @@ class Artist
   
   def self.find_or_create_by_name(artist_name)
     
-    # artist = @@all.find do |a|
-    #   name == a.name
-    # end
-    # artist || Artist.new(artist_name)
+    artist = self.all.detect { |instance| instance.name == artist_name }
+    artist || Artist.new(artist_name)
     
-    if (self.all.detect { |instance| instance.name = artist_name }.nil?)
-      artist = Artist.new(artist_name)
-    else
-      self.all.detect { |instance| instance.name = artist_name }
-    end
+    # if (self.all.detect { |instance| instance.name = artist_name }.nil?)
+    #   artist = Artist.new(artist_name)
+    # else
+    #   self.all.detect { |instance| instance.name = artist_name }
+    # end
   end
   
   def self.all
