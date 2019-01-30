@@ -10,6 +10,7 @@ class Song
     new_song.genre = song_array[2]
     artist = Artist.find_or_create_by_name(song_array[0])
     artist.add_song(new_song)
+    @@all << new_song
     new_song
   end
 end
