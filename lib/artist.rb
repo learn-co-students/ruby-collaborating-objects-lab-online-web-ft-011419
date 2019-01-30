@@ -33,8 +33,8 @@ class Artist
       else 
         artist = self.new(name)
       end  
-      artist
     end
+    artist
   end  
 
  
