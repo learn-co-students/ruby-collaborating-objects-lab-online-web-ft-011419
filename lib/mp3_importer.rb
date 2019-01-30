@@ -1,7 +1,13 @@
 class MP3Importer 
   
+  attr_accessor :path 
+
   def initialize
-    Dir.entries("./spec/fixtures").select {|f| !File.directory? f}
+    @path = path
+  end  
+  
+  def files 
+    Dir.glob(path)
   end  
   
   def import(list_of_filenames)
