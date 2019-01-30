@@ -7,6 +7,7 @@ class Artist
   def initialize(name)
     @name = name 
     @@all << self
+    @songs = []
   end 
   
   def self.all
@@ -15,7 +16,7 @@ class Artist
   
   def add_song(song)
     song.artist = self
-    @songs = song
+    @songs << song
   end  
   
   def save 
@@ -23,18 +24,18 @@ class Artist
   end  
   
   def self.find_or_create_by_name(name) 
-    if (self.artist.nil?)
+    if self.artist.nil?
       self.artist = Artist.new(name)
     else 
       self.artist.name = name
     end 
+    artist.name
   end  
-      
  
  
   def print_songs 
-    @songs.select {|song| print song}
-    end  
+    
+  
   end  
     
   
