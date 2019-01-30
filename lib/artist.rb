@@ -32,11 +32,9 @@ class Artist
       
  
  
- 
- 
- 
   def print_songs 
-    puts @songs.all
+    @songs.select {|song| print song}
+    end  
   end  
     
   

@@ -1,6 +1,6 @@
 class MP3Importer 
   
-  def files
+  def initialize
     Dir.entries("./spec/fixtures").select {|f| !File.directory? f}
   end  
   
