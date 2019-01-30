@@ -19,9 +19,15 @@ We recommend starting out by getting some of the initial `Artist` tests passing 
 
 You will be building an `Artist` class, a `Song` class, and an `MP3Importer` class. At the top level, you can think about what we'll be doing in 3 steps:
 
+<<<<<<< HEAD
 1.  The MP3 Importer will parse all the filenames in the `spec/fixtures` folder and send the filenames to the Song class
 2.  The Song class will be responsible for creating songs given each filename and sending the artist's name (a string) to the Artist class
 3.  The Artist class will be responsible for either creating the artist (if the artist doesn't exist in our program yet) or finding the instance of that artist (if the artist does exist).
+=======
+1. The MP3 Importer will parse all the filenames in the `spec/fixtures` folder and send the filenames to the Song class
+2. The Song class will be responsible for creating songs given each filename and sending the artist's name (a string) to the Artist class
+3. The Artist class will be responsible for either creating the artist (if the artist doesn't exist in our program yet) or finding the instance of that artist (if the artist does exist).
+>>>>>>> 39384fc74f815784be9f5a0d59530e2d93035767
 
 Thinking about it this way will get us started. Let's take a deeper look.
 

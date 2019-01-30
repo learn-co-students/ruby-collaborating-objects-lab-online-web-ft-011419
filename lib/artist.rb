@@ -1,3 +1,4 @@
+
 require 'pry'
 
 class Artist 
@@ -40,6 +41,7 @@ class Artist
       puts s.name
     end  
   end  
-    
   
 end  
+    
+
